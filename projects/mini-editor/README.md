@@ -1,9 +1,6 @@
 # MiniEditor
 A lightweight text editor component for Angular applications.
 
-[![npm version](https://badge.fury.io/js/mini-editor.svg)](https://badge.fury.io/js/mini-editor) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-
 ## Features
 
 *   Basic text formatting (bold, italic, underline, strikethrough, superscript, subscript)

@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <div class="options">
+    <button (click)="modify('bold')"><fa-icon [icon]="icons['bold']"></fa-icon></button>
+    <button (click)="modify('italic')"><fa-icon [icon]="icons['italic']"></fa-icon></button>
+    <button (click)="modify('underline')"><fa-icon [icon]="icons['underline']"></fa-icon></button>
+    <button (click)="modify('strikethrough')"><fa-icon [icon]="icons['strike_through']"></fa-icon></button>
+
+    <button (click)="modify('superscript')"><fa-icon [icon]="icons['super_script']"></fa-icon></button>
+    <button (click)="modify('subscript')"><fa-icon [icon]="icons['sub_script']"></fa-icon></button>
+
+    <button (click)="list('insertOrderedList')"><fa-icon [icon]="icons['list_ol']"></fa-icon></button>
+    <button (click)="list('insertUnorderedList')"><fa-icon [icon]="icons['list_ul']"></fa-icon></button>
+
+    <button (click)="undo()"><fa-icon [icon]="icons['undo']"></fa-icon></button>
+    <button (click)="redo()"><fa-icon [icon]="icons['redo']"></fa-icon></button>
+
+    <button (click)="link('createLink')"><fa-icon [icon]="icons['link']"></fa-icon></button>
+    <button (click)="link('unlink')"><fa-icon [icon]="icons['unlink']"></fa-icon></button>
+
+    <button (click)="align('justifyLeft')"><fa-icon [icon]="icons['align_left']"></fa-icon></button>
+    <button (click)="align('justifyCenter')"><fa-icon [icon]="icons['align_center']"></fa-icon></button>
+    <button (click)="align('justifyRight')"><fa-icon [icon]="icons['align_right']"></fa-icon></button>
+    <button (click)="align('justifyFull')"><fa-icon [icon]="icons['align_justify']"></fa-icon></button>
+
+    <button (click)="indent('indent')"><fa-icon [icon]="icons['indent']"></fa-icon></button>
+    <button (click)="indent('outdent')"><fa-icon [icon]="icons['outdent']"></fa-icon></button>
+
+    <label for="color" class="color">
+      <input type="color" id="color" (change)="color(colour.value)" #colour>
+    </label>
+
+    <select name="style">
+      @for (style of styles; track style) {
+        <option [value]="style" (click)="changeStyle(style)">{{ style }}</option>
+      }
+    </select>
+    
+    <select name="size">
+      @for (size of sizes; track size) {
+        <option [value]="size" (click)="changeSize(size.toString())">{{ size }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="editor" contenteditable="true" #textContent [style.focus]></div>
+</div>

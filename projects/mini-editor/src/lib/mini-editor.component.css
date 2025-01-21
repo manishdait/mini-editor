@@ -1,0 +1,74 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+button {
+  padding: .5em .8em;
+  cursor: pointer;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+button:hover {
+  background-color: #f8f8ff;
+}
+
+select {
+  padding: .5em;
+  background-color: #fff;
+  outline: none;
+  border: .1rem solid #ddd;
+  font-size: .9rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+fa-icon {
+  font-size: .9rem;
+}
+
+/*  */
+
+.wrapper {
+  background-color: #fff;
+  border: .1em solid #ddd;
+  border-radius: .2em;
+  padding: 1em;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5em;
+}
+
+.color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#color {
+  width: 1rem;
+  height: 1rem;
+  outline: none;
+  border: .1em solid #ddd;
+}
+
+.editor {
+  height: min(300px, 50vh);
+  font-size: 1rem;
+  margin-top: 1em;
+  padding: .5em;
+  border: .1em solid #ddd;
+  border-radius: .2em;
+  overflow: scroll;
+  outline: transparent;
+}
+
+.editor:focus {
+  border-color: var(--focus-highlight-style);
+}
